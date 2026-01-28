@@ -1,37 +1,84 @@
-# Netflix Data Analysis
+# 넷플릭스 데이터 분석
 
-A comprehensive data analysis project for Netflix streaming content dataset.
+Netflix 스트리밍 콘텐츠 데이터 분석 프로젝트
 
-## Overview
+## 프로젝트 개요
 
-This project analyzes Netflix content data including movies and TV shows, providing insights into:
-- Content type distribution (Movies vs TV Shows)
-- Yearly release trends
-- Top countries by content production
-- Rating distribution
+Netflix의 영화 및 TV 프로그램 데이터를 분석하여 콘텐츠 트렌드와 인사이트를 제공합니다.
 
-## Features
+## 주요 기능
 
-- Data loading and preprocessing
-- Statistical analysis
-- Data visualization
-- Error handling with custom exception classes
+- **데이터 전처리**: 결측치 처리, 데이터 정제 및 변환
+- **시각화 분석**:
+  - 콘텐츠 유형별 분포 (영화 vs TV 프로그램)
+  - 연도별 출시 추이
+  - 국가별 콘텐츠 제작 현황
+  - 평점 분포 분석
+- **객체지향 설계**: 클래스 기반 모듈화된 구조
+- **예외 처리**: 계층적 예외 처리 시스템
+- **성능 측정**: 실행 시간 측정 데코레이터
 
-## Requirements
+## 기술 스택
 
-- Python 3.x
-- pandas
-- matplotlib
-- seaborn (optional, for enhanced visualizations)
+### 데이터 처리
+- **pandas**: 데이터 조작 및 분석
+- **numpy**: 수치 연산
 
-## Usage
+### 시각화
+- **matplotlib**: 기본 시각화
+- **seaborn**: 고급 통계 시각화
 
-Open and run the Jupyter notebook `netflix_data_analysis.ipynb` to execute the analysis.
+### 기타
+- **networkx**: 네트워크 분석 (선택적)
+- **collections**: 데이터 구조
+- **re**: 정규표현식 처리
 
-## Repository Name Suggestions
+## 사용 방법
 
-- `netflix-data-analysis`
-- `streaming-content-analyzer`
-- `netflix-content-insights`
-- `netflix-dataset-analysis`
-# netflix-data-analysis
+```bash
+# Jupyter Notebook 실행
+jupyter notebook netflix_data_analysis.ipynb
+```
+
+노트북을 실행하여 데이터 분석 및 시각화를 수행합니다.
+
+## 백엔드 활용 방안
+
+이 분석 모듈은 다음과 같은 백엔드 서비스에 활용할 수 있습니다:
+
+### 1. **REST API 서비스**
+- Flask/FastAPI로 분석 결과를 JSON API로 제공
+- 실시간 데이터 분석 엔드포인트 구축
+- 대시보드용 데이터 제공
+
+### 2. **추천 시스템 백엔드**
+- 콘텐츠 유형, 국가, 평점 기반 추천 알고리즘
+- 사용자 선호도 분석 데이터 제공
+- 콘텐츠 유사도 계산
+
+### 3. **데이터 파이프라인**
+- 정기적인 데이터 업데이트 및 분석 자동화
+- ETL 프로세스에 통합
+- 분석 결과를 데이터베이스에 저장
+
+### 4. **마이크로서비스 아키텍처**
+- 독립적인 분석 서비스로 분리
+- Docker 컨테이너화하여 배포
+- 메시지 큐를 통한 비동기 처리
+
+### 5. **데이터 웨어하우스 연동**
+- 분석 결과를 데이터베이스에 저장
+- BI 도구와 연동하여 리포트 생성
+- 시계열 데이터 분석 및 트렌드 예측
+
+## 프로젝트 구조
+
+```
+├── netflix_data_analysis.ipynb  # 메인 분석 노트북
+├── README.md                    # 프로젝트 문서
+└── [데이터 파일]                # 분석 대상 데이터
+```
+
+## 라이선스
+
+MIT 라이선스
